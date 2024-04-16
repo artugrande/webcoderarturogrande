@@ -1,636 +1,605 @@
-/* Importación de fuentes */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 /* Estilos generales */
 body {
-    font-family: 'Space Grotesk', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* NAV BAR */
+.navbar-custom .navbar-nav .nav-link {
+  margin-right: 35px;
+}
 
-  /* Añadir margen a los elementos del menú */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+  font-family: "Space Grotesk", sans-serif;
+}
 
+.navbar-custom .navbar-nav {
+  margin-left: auto;
+}
+
+nav.navbar-custom {
+  background-color: #000 !important;
+}
+
+@media (max-width: 992px) {
   .navbar-custom .navbar-nav .nav-link {
-    margin-right: 35px;
+    margin: 25px 0;
+    text-align: center;
+    width: 100%;
   }
-
-  /* Cambiar el estilo de la fuente */
-  .navbar-custom .navbar-brand,
-  .navbar-custom .navbar-nav .nav-link {
-    font-family: 'Space Grotesk', sans-serif;
+}
+@media (min-width: 992px) {
+  .navbar-brand {
+    margin-left: 150px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
-
-  .navbar-custom .navbar-nav { margin-left: auto; }
-
-  /* Cambiar el color de fondo con mayor especificidad */
-  nav.navbar-custom {
-    background-color: #000 !important;
+  .navbar-nav {
+    margin-right: 150px;
   }
-
-  @media (max-width: 991.98px) {
-    .navbar-custom .navbar-nav .nav-link {
-        margin: 25px 0; /* Ajusta según tu preferencia */
-        text-align: center;
-        width: 100%;
-    }
-  }
-
-  @media (min-width: 992px) {
-    .navbar-brand {
-     margin-left: 150px;
-     margin-top: 15px;
-     margin-bottom: 15px;
-    }
-    .navbar-nav {
-margin-right: 150px;
-    }
-  }
-
-  /* Cambiar el color del active del toggle */
+}
 .navbar-toggler-icon.active {
-    color: #72EEAC;
-  }
-  
-  /* Cambiar el color del nav-link en hover */
-  .navbar-custom .navbar-nav .nav-link:hover {
-    color: #72EEAC;
-  }
+  color: #72EEAC;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: #72EEAC;
+}
 
 /* Estilos generales para los enlaces */
 a {
-    text-decoration: none !important; /* Eliminar subrayado */
-    color: inherit /* Mantener el color por defecto */
+  text-decoration: none !important; /* Eliminar subrayado */
+  color: inherit; /* Mantener el color por defecto */
 }
 
 /* Estilos específicos para los enlaces dentro de los botones */
 .feature-container button a {
-    text-decoration: none; /* Eliminar subrayado */
-    color: inherit; /* Mantener el color por defecto */
+  text-decoration: none; /* Eliminar subrayado */
+  color: inherit; /* Mantener el color por defecto */
 }
 
 /* Contenedores del logo y el menú */
-#logo-container, #nav-container {
-    margin: 0 150px;
-    display: flex;
-    align-items: center;
+#logo-container,
+#nav-container {
+  margin: 0 150px;
+  display: flex;
+  align-items: center;
 }
 
 /* Contenido principal */
 main {
-    display: flex;
-    flex-direction: column;
-    background-color: #FFFFFF;
-    padding: 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  padding: 0px;
 }
-
-#content {
-    padding: 50px 50px; /* Ajustar el espaciado para pantallas más pequeñas */
-    background-color: #121212;
-    color: #FFFFFF;
-    order: 2;
-    text-align: center;
+main #content {
+  padding: 50px 50px; /* Ajustar el espaciado para pantallas más pequeñas */
+  background-color: #121212;
+  color: #FFF;
+  order: 2;
+  text-align: center;
 }
-
-#content h2 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 50px; /* Reducir el tamaño del texto para pantallas más pequeñas */
-    line-height: 55px; /* Ajustar la altura de línea */
-    margin: 0;
+main #content h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 50px; /* Reducir el tamaño del texto para pantallas más pequeñas */
+  line-height: 55px; /* Ajustar la altura de línea */
+  margin: 0;
 }
-
-#content p {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 14px; /* Reducir el tamaño del texto para pantallas más pequeñas */
-    line-height: 28px; /* Ajustar la altura de línea */
-    font-weight: normal;
+main #content p {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px; /* Reducir el tamaño del texto para pantallas más pequeñas */
+  line-height: 28px; /* Ajustar la altura de línea */
+  font-weight: normal;
 }
 
 /* Botones */
 #content a {
-    display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 #image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #image-container {
-    order: 1;
+  order: 1;
 }
 
 /* Consultas de medios */
 @media only screen and (min-width: 768px) {
-    main {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    #content {
-        width: 50%;
-        padding: 150px 150px;
-        text-align: left;
-    }
-
-    #image-container {
-        width: 50%;
-        order: 3;
-    }
+  main {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main #content {
+    width: 50%;
+    padding: 150px;
+    text-align: left;
+  }
+  main #image-container {
+    width: 50%;
+    order: 3;
+  }
 }
-
 /* Botones */
 button {
-    background-color: #72EEAC;
-    border: none;
-    border-radius: 25px !important;
-    font-family: 'Space Grotesk', sans-serif !important;
-    font-size: 15px;
-    padding: 10px 20px;
-    margin-top: 10px;
-    margin-right: 10px;
-    cursor: pointer;
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
+  background-color: #72EEAC;
+  border: none;
+  border-radius: 25px !important;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  color: #000;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 button:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
-
 button:hover {
-    background-color: #ffffff;
-    color: #000000;
+  background-color: #FFF;
+  color: #000;
 }
 
-/* Contenedor de características */
 #secondary-container {
-    background-color: #171717;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 50px 25px;
+  background-color: #171717;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 50px 75px;
+  /* Consulta de medios para móviles */
 }
-
-.feature-container {
-    background-color: #222222;
-    border: 8px solid #323232;
-    border-radius: 20px;
-    width: calc(100% - 40px); /* Ancho total con margen */
-    margin: 0 0 25px; /* Espacio entre las cards */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; /* Alinear el texto al centro */
-    transition: transform 0.3s ease;
-    padding-bottom: 20px;
+#secondary-container .feature-container {
+  background-color: #222222;
+  border: 8px solid #323232;
+  border-radius: 25px;
+  width: calc(100% - 40px); /* Ancho total con margen */
+  margin: 0 0 25px; /* Espacio entre las cards */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Alinear el texto al centro */
+  transition: transform 0.3s ease;
+  padding-bottom: 20px;
 }
-
-.feature-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+#secondary-container .feature-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.feature-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
-    transition: filter 0.3s ease;
+#secondary-container .feature-container:hover img {
+  filter: brightness(130%);
 }
-
-.feature-container:hover img {
-    filter: brightness(130%);
+#secondary-container .feature-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  transition: filter 0.3s ease;
 }
-
-.feature-container h2 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 25px;
-    color: #ffffff;
-    margin: 20px 0 0 0;
+#secondary-container .feature-container h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 25px;
+  color: #FFF;
+  margin: 20px 0 0 0;
 }
-
-.feature-container p {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 11px;
-    color: #ffffff;
+#secondary-container .feature-container p {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 11px;
+  color: #FFF;
 }
-
-/* Consulta de medios para móviles */
 @media only screen and (min-width: 768px) {
-    .feature-container {
-        width: calc(25% - 40px); /* Ajustar el ancho para mostrar 4 cards por fila */
-        margin: 0 20px 20px 0; /* Espacio entre las cards */
-    }
-    #secondary-container {
-     padding: 100px;
-    }
-
+  #secondary-container .feature-container {
+    width: calc(25% - 40px); /* Ajustar el ancho para mostrar 4 cards por fila */
+    margin: 0 20px 20px 0; /* Espacio entre las cards */
+  }
+  #secondary-container #secondary-container {
+    padding: 100px;
+  }
 }
 
 /* Footer */
 footer {
-    background-color: #000000;
-    padding: 50px; /* Ajusta el padding según necesites */
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
-    justify-content: space-between;
-    color: #ffffff;
+  background-color: #000;
+  padding: 50px; /* Ajusta el padding según necesites */
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+  justify-content: space-between;
+  color: #FFF;
+  text-align: center; /* Centrar el contenido */
+  /* Estilo para el logo en el footer */
+  /* Estilo para los iconos sociales */
+  /* Efecto de escala sobre los botones */
+  /* Consulta de medios para pantallas más pequeñas (por ejemplo, móviles) */
 }
-
 footer div {
-    margin: 10px; /* Espaciado entre los elementos del footer */
-    flex: 1 1 auto; /* Hace que los elementos se ajusten automáticamente */
+  margin: 10px; /* Espaciado entre los elementos del footer */
+  flex: 1 1 auto; /* Hace que los elementos se ajusten automáticamente */
 }
-
-#footer-logo p, #footer-social p {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 14px;
+footer #footer-logo p, footer #footer-social p {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
 }
-
-#footer-nav ul {
-    list-style: none;
-    padding: 0;
+footer #footer-nav ul {
+  list-style: none;
+  padding: 0;
 }
-
-#footer-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 14px;
-    display: block;
-    padding: 5px 0;
+footer #footer-nav ul li a {
+  color: #FFF;
+  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  display: block;
+  padding: 5px 0;
 }
-
-#footer-nav ul li a:hover {
-    color: #72EEAC;
+footer #footer-nav ul li a:hover {
+  color: #72EEAC;
 }
-
-#footer-social img {
-    padding: 5px;
-    margin: 2px 2px;
+footer #footer-social img {
+  padding: 5px;
+  margin: 2px 2px;
 }
-
-#footer-social img:hover {
-    transform: scale(1.1);
+footer #footer-social img:hover {
+  transform: scale(1.1);
 }
-
-#footer-credits {
-    background-color: #72EEAC;
-    color: black;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 17px;
-    text-align: center;
-    padding: 15px 0;
+footer #footer-logo a {
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
-
-/* Estilo para el logo en el footer */
-#footer-logo a {
-    display: inline-block;
-    transition: transform 0.3s ease;
+footer #footer-logo a:hover {
+  transform: scale(1.05);
 }
-
-#footer-logo a:hover {
-    transform: scale(1.05);
+footer #footer-social img {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin: 5px 5px;
+  padding: 0px;
 }
-
-/* Estilo para los iconos sociales */
-#footer-social img {
-    display: inline-block;
-    transition: transform 0.3s ease;
-    margin: 5px 5px;
-    padding: 0px;
+footer #footer-social img:hover {
+  transform: scale(1.1);
 }
-
-#footer-social img:hover {
-    transform: scale(1.1);
+footer button {
+  transition: transform 0.3s ease;
 }
-
-/* Efecto de escala sobre los botones */
-button {
-    transition: transform 0.3s ease;
+footer button:hover {
+  transform: scale(1.05);
 }
-
-button:hover {
-    transform: scale(1.05);
-}
-
-/* Consulta de medios para pantallas más pequeñas (por ejemplo, móviles) */
 @media only screen and (max-width: 768px) {
-    footer {
-        flex-direction: column; /* Cambiar a dirección de columna */
-        text-align: center; /* Centrar el contenido */
-    }
+  footer {
+    flex-direction: column; /* Cambiar a dirección de columna */
+    text-align: center; /* Centrar el contenido */
+  }
+}
+footer footer div {
+  margin: 10px 0; /* Espaciado entre los elementos del footer */
+}
 
-    footer div {
-        margin: 10px 0; /* Espaciado entre los elementos del footer */
-    }
+/* Estilo para el footer credits */
+#footer-credits {
+  background-color: #72EEAC;
+  color: #000;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  padding: 15px 0;
+  flex: 1 0 100%; /* Ajustar ancho para ocupar todo el espacio disponible */
 }
 
 /* Estilos para la sección de servicios */
 .service-section {
-    background-color: #171717;
-    display: flex;
-    align-items: center;
+  background-color: #171717; /* Fondo oscuro para la sección */
+  padding: 0; /* Espaciado alrededor del contenido */
+  /* Ajustes responsivos para dispositivos móviles */
 }
-
-.service-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Alineación vertical al centro */
-}
-
-.service-content img {
-    width: 50%; /* Ancho fijo */
-    height: auto; /* Altura fija */
-    object-fit: cover;
-}
-
-.service-content .image-container {
-    width: 50%; /* El contenedor de la imagen ocupa el 50% del ancho */
-    position: relative; /* Posicionamiento relativo para utilizar padding como porcentaje */
-    padding-bottom: 50%; /* Proporción cuadrada de 1x1 */
-}
-
-.service-content .image-container img {
-    position: absolute; /* Posicionamiento absoluto para rellenar completamente el contenedor */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.service-details {
-    width: 50%;
-    padding-right: 150px; /* Padding a la derecha */
-    padding-left: 75px; /* Padding a la izquierda */
-}
-
-.service-details h2 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 50px;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.service-details p {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 15px;
-    color: #ffffff;
-    margin-bottom: 20px;
-    line-height: 38px;
-}
-
-.service-details button {
-    background-color: #72EEAC;
-    border: none;
-    border-radius: 25px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 15px;
-    padding: 10px 20px;
-    cursor: pointer;
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.service-details button:hover {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-/* Cambiar el orden de los bloques de servicios */
 .service-section:nth-child(odd) .service-content {
-    flex-direction: row-reverse; /* Invertir el orden de los elementos */
+  flex-direction: row-reverse; /* Invertir el orden de los elementos en escritorio */
 }
-
-.service-section:nth-child(odd) .service-details {
-    padding-right: 75px; /* Ajustar el padding a la derecha */
-    padding-left: 150px; /* Ajustar el padding a la izquierda */
+.service-section .service-content {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten al tamaño del contenedor */
+  justify-content: space-between; /* Espacia los elementos uniformemente */
+  align-items: center; /* Alineación vertical */
+  margin: 0 -15px; /* Ajusta márgenes negativos para manejar el espaciado entre elementos de flex */
 }
-
-.service-details h2 span {
-    color: #72EEAC; /* Color del texto resaltado */
+.service-section .service-content img, .service-section .service-content .service-details {
+  flex: 1 1 50%; /* Ocupa casi la mitad del espacio, permitiendo flexibilidad */
+  max-width: 50%; /* Máximo del 50% para evitar problemas de margen */
+  padding: 0 15px; /* Padding horizontal para manejar el espacio entre elementos */
 }
-
-.service-details h2 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 50px;
-    color: #ffffff;
-    margin-bottom: 20px;
+.service-section .service-content img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+  height: auto; /* Permite que la altura se ajuste proporcionalmente */
+  margin: 0 auto; /* Centra la imagen eliminando márgenes horizontales */
+  padding: 0; /* Sin padding adicional */
+  display: block; /* Asegura que no haya espacio extra alrededor de la imagen */
 }
-
+.service-section .service-content .image-container {
+  width: 100%; /* El contenedor de la imagen ocupa el 100% del ancho en móviles */
+  position: relative; /* Posicionamiento relativo para utilizar padding como porcentaje */
+  padding-bottom: 56.25%; /* Proporción de aspecto para imágenes más común */
+  overflow: hidden; /* Oculta cualquier contenido que desborde */
+}
+.service-section .service-content .image-container img {
+  position: absolute; /* Posicionamiento absoluto para rellenar completamente el contenedor */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.service-section .service-content .service-details {
+  padding-left: 150px; /* Ajusta el padding para la alineación del texto */
+  padding-right: 150px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total definido */
+  color: #FFF; /* Restaura el color del texto para detalles del servicio */
+}
+.service-section .service-content .service-details h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.service-section .service-content .service-details h2 span {
+  color: #72EEAC; /* Color del texto resaltado */
+}
+.service-section .service-content .service-details p {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 38px;
+}
+.service-section .service-content .service-details button {
+  background-color: #72EEAC;
+  border: none;
+  border-radius: 25px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.service-section .service-content .service-details button:hover {
+  background-color: #FFF;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .service-section .service-content {
+    flex-direction: column; /* Cambia a disposición en columna para móviles */
+    margin: 0; /* Elimina los márgenes negativos en móviles */
+  }
+  .service-section .service-content img, .service-section .service-content .service-details {
+    flex: 1 1 100%; /* Cada elemento ocupa el 100% del ancho */
+    max-width: 100%; /* Ajusta el ancho máximo al 100% para móviles */
+    padding: 0; /* Elimina el padding horizontal en móviles */
+  }
+  .service-section .service-content .service-details {
+    text-align: center; /* Centra el texto en dispositivos móviles */
+    margin: 100px 50px; /* Ajusta los márgenes verticales para separación visual */
+    color: #FFF; /* Asegura que el color del texto sea consistente en dispositivos móviles */
+  }
+}
 
 /* Estilos para el div pagetitle */
 .pagetitle {
-    text-align: center; /* Alineación del texto al centro */
-    background-color: #121212;
-    padding: 30px 0; /* Padding superior e inferior de 30px */
-    margin: 0; /* Eliminar márgenes */
+  text-align: center; /* Alineación del texto al centro */
+  background-color: #121212;
+  padding: 30px 0; /* Padding superior e inferior de 30px */
+  margin: 0; /* Eliminar márgenes */
 }
-
 .pagetitle p {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 50px;
-    color: #fff;
-    margin: 0; /* Eliminar márgenes */
+  font-family: "Bebas Neue", cursive;
+  font-size: 50px;
+  color: #FFF;
+  margin: 0; /* Eliminar márgenes */
 }
-
 .pagetitle p span {
-    color: #72EEAC;
+  color: #72EEAC;
 }
 
-/* Estilos para la nueva sección de goal-purpose-values */
+/* Estilos para la sección de Goal, Purpose, and Values */
 .goal-purpose-values {
-    padding: 75px 150px;
-    display: flex;
-    justify-content: space-between; /* Cambiado a space-between para agregar espacio entre las columnas */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Espacio entre columnas en escritorio */
+  padding: 20px; /* Padding general */
+  background-color: #141314; /* Color de fondo */
+}
+.goal-purpose-values .column {
+  flex: 1 1 30%; /* Flexibilidad y base para columnas */
+  margin: 10px; /* Margen entre columnas */
+  padding: 20px; /* Padding interno para el contenido */
+  box-sizing: border-box; /* Calcula el padding dentro del width */
+  color: #FFF; /* Color del texto */
+}
+.goal-purpose-values .column h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 50px; /* Ajuste de tamaño de fuente para encabezados */
+  color: #72EEAC; /* Color del texto resaltado */
+  margin-bottom: 10px; /* Espacio después del encabezado */
+}
+.goal-purpose-values .column p {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px; /* Tamaño de fuente para el texto */
+  line-height: 38px;
 }
 
-.column {
-    width: 30%; /* Ajusta el ancho de las columnas según sea necesario */
-    color: #fff; /* Cambia el color del texto si es necesario */
-    margin: 0 10px; /* Margen horizontal de 10px entre las columnas */
+/* Media Queries para ajustes responsivos */
+@media (max-width: 992px) {
+  .goal-purpose-values {
+    flex-direction: column; /* Cambia a disposición en columna en dispositivos móviles */
+  }
+  .goal-purpose-values .column {
+    flex: 1 1 100%; /* Cada columna toma el 100% del ancho en móviles */
+    margin: 50px 50px;
+    text-align: center;
+  }
 }
-
-.column h2 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 50px;
-}
-
-.column h2 span {
-    color: #72EEAC; /* Cambia el color del texto resaltado si es necesario */
-}
-
-.column p {
-    line-height: 30px; /* Altura de línea de 30px para los cuerpos de las columnas */
-}
-
-/* Estilos para el párrafo Follow @artugrande */
+/* Estilos adicionales */
+/* Estilos para el párrafo Follow @artugrande dentro de detalles del servicio */
 .service-details p {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 15px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 14px;
 }
 
 /* Estilos para los iconos de redes sociales */
 #social-icons {
-    display: flex;
-    justify-content: flex-start; /* Alinea los iconos a la izquierda */
-    max-width: 100%; /* Asegura que los iconos no excedan el ancho del contenedor */
+  display: flex;
+  justify-content: flex-start; /* Alinea los iconos a la izquierda */
+  max-width: 100%; /* Asegura que los iconos no excedan el ancho del contenedor */
 }
-
 #social-icons img {
-    margin: 0 10px; /* Ajusta el margen entre los iconos según sea necesario */
-    height: 35px;
-    width: auto;
+  margin: 0 10px; /* Ajusta el margen entre los iconos según sea necesario */
+  height: 35px;
+  width: auto;
 }
 
-/* Estilos para la sección de contacto */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+/* Estilos para los inputs y textarea en general */
+input[type=text],
+input[type=email],
+input[type=tel],
 textarea {
-    width: 380px; /* Ancho fijo de 380px */
-    padding: 10px;
-    border: 1px solid #787778;
-    border-radius: 10px;
-    background-color: #171717;
-    color: #fff;
-    margin-bottom: 20px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 18px; /* Tamaño de fuente */
+  width: 80%; /* Hace que los inputs usen el ancho completo del contenedor padre */
+  padding: 12px 20px; /* Aumenta el padding para mejor toque en dispositivos móviles */
+  border: 1px solid #787778; /* Estilo del borde */
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #171717; /* Color de fondo */
+  color: #FFF; /* Color del texto */
+  margin-bottom: 15px; /* Espaciado entre los inputs */
+  font-family: "Space Grotesk", sans-serif; /* Fuente */
+  font-size: 14px; /* Tamaño del texto */
 }
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
 textarea:focus {
-    outline: none;
-    border-color: #93eab1; /* Cambia el color al estar seleccionado */
+  outline: none; /* Elimina el contorno predeterminado */
+  border-color: #93eab1; /* Color del borde al enfocar */
 }
 
-/* Estilo para el botón */
-button[type="submit"] {
-    background-color: #72EEAC;
-    border: none;
-    border-radius: 25px;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 15px;
-    padding: 10px 20px;
-    cursor: pointer;
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
+/* Estilos para el botón de enviar */
+button[type=submit] {
+  width: auto; /* El ancho se ajusta al contenido interno */
+  padding: 10px 20px; /* Padding interno */
+  background-color: #72EEAC; /* Color de fondo */
+  color: black; /* Color del texto */
+  border: none; /* Sin bordes */
+  border-radius: 25px; /* Bordes redondeados */
+  font-family: "Space Grotesk", sans-serif; /* Fuente */
+  font-size: 14px; /* Tamaño del texto */
+  cursor: pointer; /* Cursor como puntero para indicar clic */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para efectos hover */
+  display: block; /* Hacer que el botón sea un bloque para alinear correctamente */
+  margin-top: 20px; /* Margen superior */
+  margin-bottom: 0; /* Margen inferior */
+  align-self: center; /* Alinea el botón al centro en su contenedor flex */
+}
+button[type=submit]:hover {
+  background-color: #FFF; /* Color de fondo al pasar el ratón */
+  color: #000; /* Color del texto al pasar el ratón */
 }
 
-button[type="submit"]:hover {
-    background-color: #ffffff;
-    color: #000000;
+/* Ajustes responsivos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+  .service-details {
+    padding: 20px; /* Padding más pequeño para los detalles del servicio */
+  }
+  input[type=text],
+  input[type=email],
+  input[type=tel],
+  textarea,
+  button[type=submit] {
+    width: 100%; /* Ancho completo en dispositivos móviles para evitar desbordamiento */
+  }
 }
-
 .service-details form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-
 .service-details form button {
-    align-self: flex-start; /* Alinea el botón a la izquierda */
+  align-self: flex-start; /* Alinea el botón a la izquierda */
 }
 
 /* Estilos para el HTML de Portfolio con grids */
-
 .grid-container {
-    display: grid;
-    grid-template-columns: 100%;
-    padding: 20px; /* Ajuste del padding */
-    background-color: #171717;
-    text-align: center;
-    align-items: center; /* Centra verticalmente */
-    cursor: pointer;
+  display: grid;
+  grid-template-columns: 100%;
+  padding: 20px; /* Ajuste del padding */
+  background-color: #171717;
+  text-align: center;
+  align-items: center; /* Centra verticalmente */
+  cursor: pointer;
 }
-
 .grid-container img {
-    height: 325px; /* Establece la altura máxima de las imágenes al 100% del contenedor */
-    width: auto;
-    vertical-align: middle; /* Centra verticalmente la imagen */
+  height: 375px; /* Establece la altura máxima de las imágenes al 100% del contenedor */
+  width: auto;
+  vertical-align: middle; /* Centra verticalmente la imagen */
 }
-
-/* Efecto de hover */
 .grid-container img:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
 }
 
 .grid-item {
-    height: auto;
-    border: solid 8px;
-    border-color: #323232;
-    margin-left: 25px;
-    margin-bottom: 25px;
-    border-radius: 25px;
-    }
-
-    .grid-one {
-        background-color: #00E1FC;
-        padding: 40px 0px;
-    }
-    .grid-two {
-        background-color: #DFF38D;
-        padding: 40px 0px;
-    }
-    
-    .grid-three {
-        background-color: #F950E5;
-        padding: 40px 0px;
-    }
-    
-    .grid-five {
-        background-color: #F0CA5D;
-        padding: 40px 0px;
-    }
-    
-    .grid-six {
-        background-color: #7ECC7A;
-        padding: 40px 0px;
-    }
-
-    .first-large-item {
-        background-color: #2A6270;
-        padding: 40px 0px;
-        }
-        .second-large-item {
-            background-color: #C05D38;
-            padding: 40px 0px;
-            }
-            .first-large-item img {
-               width: 75%;
-               height: auto;
-                }
-                .second-large-item img {
-                    width: 75%;
-                    height: auto;
-                    }
+  height: auto;
+  border: solid 8px #323232;
+  margin-left: 0px;
+  margin-bottom: 25px;
+  border-radius: 25px;
+  padding: 35px 0px;
+}
+.grid-item.grid-one {
+  background-color: #00E1FC;
+}
+.grid-item.grid-two {
+  background-color: #DFF38D;
+}
+.grid-item.grid-three {
+  background-color: #F950E5;
+}
+.grid-item.grid-five {
+  background-color: #F0CA5D;
+}
+.grid-item.grid-six {
+  background-color: #7ECC7A;
+}
+.grid-item.first-large-item, .grid-item.second-large-item {
+  padding: 40px 0px;
+}
+.grid-item.first-large-item img, .grid-item.second-large-item img {
+  width: 75%;
+  height: auto;
+}
+.grid-item.first-large-item {
+  background-color: #2A6270;
+}
+.grid-item.second-large-item {
+  background-color: #C05D38;
+}
 
 @media only screen and (min-width: 768px) {
-.grid-container {
-grid-template-columns: 33% 33% 33%;
-padding: 100px;
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 100px;
+    gap: 25px; /* Espacio de 25px entre columnas y filas para escritorios */
+  }
+  .first-large-item {
+    grid-column: 1/3;
+  }
+  .second-large-item {
+    grid-column: 2/4;
+  }
 }
-    
-.first-large-item {
-grid-column-start: 1;
-grid-column-end: 3;
-background-color: #2A6270;
-padding: 40px 0px;
-}
-.second-large-item {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    background-color: #C05D38;
-    padding: 40px 0px;
-    }
-}
+
+/*# sourceMappingURL=style.css.map */

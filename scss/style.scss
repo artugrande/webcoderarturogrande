@@ -1,0 +1,696 @@
+// Definiciones de fuentes
+$font-primary: 'Space Grotesk', sans-serif;   // Fuente primaria para textos
+$font-secondary: 'Bebas Neue', cursive;       // Fuente secundaria para títulos
+
+// Definiciones de colores
+$color-accent: #72EEAC;                       // Color para acentos y detalles interactivos
+$color-dark: #000;                            // Color oscuro, utilizado en textos o fondos oscuros
+$color-light: #FFF;                           // Color claro, comúnmente para fondos o textos claros
+$color-background: #121212;
+$color-backgroundb: #222222;                      // Color de fondo principal
+$color-border: #323232;                       // Color utilizado para bordes y separadores
+$color-service-background: #171717;           // Fondo específico para secciones de servicios
+
+// Tamaños de fuente
+$font-size-small: 14px;
+$font-size-xsmall: 11px;
+$font-size-m: 25px;                          
+$font-size-large: 50px;                       // Tamaño de fuente grande para títulos prominentes
+
+// Medidas de diseño
+$border-radius-large: 25px;                   // Radio de borde para elementos redondeados
+$margin-large: 150px;                         // Margen grande usado en layout general
+$padding-large: 150px;                        // Padding grande usado en contenedores
+$line-height-large: 60px;
+$line-height-small: 28px;
+
+// Transiciones y efectos
+$transition-base: 0.3s ease;                  // Base para transiciones suaves
+
+// Puntos de ruptura para media queries
+$media-break-small: 768px;                    // Punto de ruptura para dispositivos pequeños (tabletas)
+$media-break-large: 992px;                    // Punto de ruptura para dispositivos grandes (desktops)
+
+// Importaciones de fuentes
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@mixin typography($font-family, $font-size, $line-height, $color: $color-light) {
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+}
+
+/* Estilos generales */
+body {
+    font-family: $font-primary;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAV BAR */
+
+.navbar-custom .navbar-nav .nav-link {
+    margin-right: 35px;
+  }
+  
+  .navbar-custom .navbar-brand,
+  .navbar-custom .navbar-nav .nav-link {
+    font-family: $font-primary;
+  }
+  
+  .navbar-custom .navbar-nav {
+    margin-left: auto;
+  }
+  
+  nav.navbar-custom {
+    background-color: $color-dark !important;
+  }
+  
+  @media (max-width: $media-break-large) {
+    .navbar-custom .navbar-nav .nav-link {
+      margin: 25px 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: $media-break-large) {
+    .navbar-brand {
+      margin-left: $margin-large;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .navbar-nav {
+      margin-right: $margin-large;
+    }
+  }
+  
+  .navbar-toggler-icon.active {
+    color: $color-accent;
+  }
+  
+  .navbar-custom .navbar-nav .nav-link:hover {
+    color: $color-accent;
+  }
+  
+
+/* Estilos generales para los enlaces */
+a {
+    text-decoration: none !important; /* Eliminar subrayado */
+    color: inherit; /* Mantener el color por defecto */
+}
+
+/* Estilos específicos para los enlaces dentro de los botones */
+.feature-container button a {
+    text-decoration: none; /* Eliminar subrayado */
+    color: inherit; /* Mantener el color por defecto */
+}
+
+/* Contenedores del logo y el menú */
+#logo-container,
+#nav-container {
+    margin: 0 $margin-large;
+    display: flex;
+    align-items: center;
+}
+
+/* Contenido principal */
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-light;
+    padding: 0px;
+
+    #content {
+        padding: 50px 50px; /* Ajustar el espaciado para pantallas más pequeñas */
+        background-color: $color-background;
+        color: $color-light;
+        order: 2;
+        text-align: center;
+
+        h2 {
+            font-family: $font-secondary;
+            font-size: $font-size-large; /* Reducir el tamaño del texto para pantallas más pequeñas */
+            line-height: 55px; /* Ajustar la altura de línea */
+            margin: 0;
+        }
+
+        p {
+            font-family: $font-primary;
+            font-size: $font-size-small; /* Reducir el tamaño del texto para pantallas más pequeñas */
+            line-height: $line-height-small; /* Ajustar la altura de línea */
+            font-weight: normal;
+        }
+    }
+}
+
+/* Botones */
+#content a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#image-container {
+    order: 1;
+}
+
+/* Consultas de medios */
+@media only screen and (min-width: $media-break-small) {
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+
+        #content {
+            width: 50%;
+            padding: $padding-large;
+            text-align: left;
+        }
+
+        #image-container {
+            width: 50%;
+            order: 3;
+        }
+    }
+}
+
+/* Botones */
+button {
+    background-color: $color-accent;
+    border: none;
+    border-radius: $border-radius-large !important;
+    @include typography($font-primary, $font-size-small, normal, $color-dark);
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color $transition-base, color $transition-base;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        background-color: $color-light;
+        color: $color-dark;
+    }
+}
+
+#secondary-container {
+    background-color: $color-service-background;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 50px 75px;
+
+    .feature-container {
+        background-color: $color-backgroundb;
+        border: 8px solid $color-border;
+        border-radius: $border-radius-large;
+        width: calc(100% - 40px); /* Ancho total con margen */
+        margin: 0 0 25px; /* Espacio entre las cards */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Alinear el texto al centro */
+        transition: transform $transition-base;
+        padding-bottom: 20px;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+            img {
+                filter: brightness(130%);
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+            transition: filter $transition-base;
+        }
+
+        h2 {
+            font-family: $font-secondary;
+            font-size: $font-size-m;
+            color: $color-light;
+            margin: 20px 0 0 0;
+        }
+
+        p {
+            font-family: $font-primary;
+            font-size: $font-size-xsmall;
+            color: $color-light;
+        }
+    }
+
+    /* Consulta de medios para móviles */
+    @media only screen and (min-width: $media-break-small) {
+        .feature-container {
+            width: calc(25% - 40px); /* Ajustar el ancho para mostrar 4 cards por fila */
+            margin: 0 20px 20px 0; /* Espacio entre las cards */
+        }
+        #secondary-container {
+            padding: 100px;
+        }
+    }
+}
+
+/* Footer */
+footer {
+    background-color: $color-dark;
+    padding: 50px; /* Ajusta el padding según necesites */
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    justify-content: space-between;
+    color: $color-light;
+    text-align: center; /* Centrar el contenido */
+
+    div {
+        margin: 10px; /* Espaciado entre los elementos del footer */
+        flex: 1 1 auto; /* Hace que los elementos se ajusten automáticamente */
+    }
+
+    #footer-logo p, #footer-social p {
+        font-family: $font-primary;
+        font-size: $font-size-small;
+    }
+
+    #footer-nav ul {
+        list-style: none;
+        padding: 0;
+
+        li a {
+            color: $color-light;
+            text-decoration: none;
+            font-family: $font-primary;
+            font-size: $font-size-small;
+            display: block;
+            padding: 5px 0;
+
+            &:hover {
+                color: $color-accent;
+            }
+        }
+    }
+
+    #footer-social img {
+        padding: 5px;
+        margin: 2px 2px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    /* Estilo para el logo en el footer */
+    #footer-logo a {
+        display: inline-block;
+        transition: transform $transition-base;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    /* Estilo para los iconos sociales */
+    #footer-social img {
+        display: inline-block;
+        transition: transform $transition-base;
+        margin: 5px 5px;
+        padding: 0px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    /* Efecto de escala sobre los botones */
+    button {
+        transition: transform $transition-base;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    /* Consulta de medios para pantallas más pequeñas (por ejemplo, móviles) */
+    @media only screen and (max-width: $media-break-small) {
+        flex-direction: column; /* Cambiar a dirección de columna */
+        text-align: center; /* Centrar el contenido */
+    }
+
+    footer div {
+        margin: 10px 0; /* Espaciado entre los elementos del footer */
+    }
+}
+
+/* Estilo para el footer credits */
+#footer-credits {
+    background-color: $color-accent;
+    color: $color-dark;
+    font-family: $font-primary;
+    font-size: $font-size-small;
+    text-align: center;
+    padding: 15px 0;
+    flex: 1 0 100%; /* Ajustar ancho para ocupar todo el espacio disponible */
+}
+
+
+/* Estilos para la sección de servicios */
+.service-section {
+    background-color: $color-service-background; /* Fondo oscuro para la sección */
+    padding: 0; /* Espaciado alrededor del contenido */
+
+    &:nth-child(odd) .service-content {
+        flex-direction: row-reverse; /* Invertir el orden de los elementos en escritorio */
+    }
+
+    .service-content {
+        display: flex;
+        flex-wrap: wrap; /* Permite que los elementos se ajusten al tamaño del contenedor */
+        justify-content: space-between; /* Espacia los elementos uniformemente */
+        align-items: center; /* Alineación vertical */
+        margin: 0 -15px; /* Ajusta márgenes negativos para manejar el espaciado entre elementos de flex */
+
+        img, .service-details {
+            flex: 1 1 50%; /* Ocupa casi la mitad del espacio, permitiendo flexibilidad */
+            max-width: 50%; /* Máximo del 50% para evitar problemas de margen */
+            padding: 0 15px; /* Padding horizontal para manejar el espacio entre elementos */
+        }
+
+        img {
+            width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+            height: auto; /* Permite que la altura se ajuste proporcionalmente */
+            margin: 0 auto; /* Centra la imagen eliminando márgenes horizontales */
+            padding: 0; /* Sin padding adicional */
+            display: block; /* Asegura que no haya espacio extra alrededor de la imagen */
+        }
+
+        .image-container {
+            width: 100%; /* El contenedor de la imagen ocupa el 100% del ancho en móviles */
+            position: relative; /* Posicionamiento relativo para utilizar padding como porcentaje */
+            padding-bottom: 56.25%; /* Proporción de aspecto para imágenes más común */
+            overflow: hidden; /* Oculta cualquier contenido que desborde */
+
+            img {
+                position: absolute; /* Posicionamiento absoluto para rellenar completamente el contenedor */
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .service-details {
+            padding-left: $padding-large; /* Ajusta el padding para la alineación del texto */
+            padding-right: $padding-large;
+            box-sizing: border-box; /* Asegura que el padding no afecte el ancho total definido */
+            color: $color-light; /* Restaura el color del texto para detalles del servicio */
+
+            h2 {
+                font-family: $font-secondary;
+                font-size: $font-size-large;
+                margin-bottom: 20px;
+
+                span {
+                    color: $color-accent; /* Color del texto resaltado */
+                }
+            }
+
+            p {
+                font-family: $font-primary;
+                font-size: $font-size-small;
+                margin-bottom: 20px;
+                line-height: 38px;
+            }
+
+            button {
+                background-color: $color-accent;
+                border: none;
+                border-radius: $border-radius-large;
+                font-family: $font-primary;
+                font-size: $font-size-small;
+                padding: 10px 20px;
+                cursor: pointer;
+                color: black;
+                transition: background-color $transition-base, color $transition-base;
+
+                &:hover {
+                    background-color: $color-light;
+                    color: $color-dark;
+                }
+            }
+        }
+    }
+
+    /* Ajustes responsivos para dispositivos móviles */
+    @media (max-width: $media-break-small) {
+        .service-content {
+            flex-direction: column; /* Cambia a disposición en columna para móviles */
+            margin: 0; /* Elimina los márgenes negativos en móviles */
+
+            img, .service-details {
+                flex: 1 1 100%; /* Cada elemento ocupa el 100% del ancho */
+                max-width: 100%; /* Ajusta el ancho máximo al 100% para móviles */
+                padding: 0; /* Elimina el padding horizontal en móviles */
+            }
+
+            .service-details {
+                text-align: center; /* Centra el texto en dispositivos móviles */
+                margin: 100px 50px; /* Ajusta los márgenes verticales para separación visual */
+                color: $color-light; /* Asegura que el color del texto sea consistente en dispositivos móviles */
+            }
+        }
+    }
+}
+
+
+/* Estilos para el div pagetitle */
+.pagetitle {
+    text-align: center; /* Alineación del texto al centro */
+    background-color: #121212;
+    padding: 30px 0; /* Padding superior e inferior de 30px */
+    margin: 0; /* Eliminar márgenes */
+
+    p {
+        font-family: $font-secondary;
+        font-size: $font-size-large;
+        color: $color-light;
+        margin: 0; /* Eliminar márgenes */
+
+        span {
+            color: $color-accent;
+        }
+    }
+}
+
+/* Estilos para la sección de Goal, Purpose, and Values */
+.goal-purpose-values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espacio entre columnas en escritorio */
+    padding: 20px; /* Padding general */
+    background-color: #141314; /* Color de fondo */
+
+    .column {
+        flex: 1 1 30%; /* Flexibilidad y base para columnas */
+        margin: 10px; /* Margen entre columnas */
+        padding: 20px; /* Padding interno para el contenido */
+        box-sizing: border-box; /* Calcula el padding dentro del width */
+        color: $color-light; /* Color del texto */
+
+        h2 {
+            font-family: $font-secondary;
+            font-size: $font-size-large; /* Ajuste de tamaño de fuente para encabezados */
+            color: $color-accent; /* Color del texto resaltado */
+            margin-bottom: 10px; /* Espacio después del encabezado */
+        }
+
+        p {
+            font-family: $font-primary;
+            font-size: $font-size-small; /* Tamaño de fuente para el texto */
+            line-height: 38px;
+        }
+    }
+}
+
+/* Media Queries para ajustes responsivos */
+@media (max-width: $media-break-large) {
+    .goal-purpose-values {
+        flex-direction: column; /* Cambia a disposición en columna en dispositivos móviles */
+    }
+
+    .goal-purpose-values .column {
+        flex: 1 1 100%; /* Cada columna toma el 100% del ancho en móviles */
+        margin: 50px 50px;
+        text-align: center;
+    }
+}
+
+/* Estilos adicionales */
+
+/* Estilos para el párrafo Follow @artugrande dentro de detalles del servicio */
+.service-details {
+    p {
+        font-family: $font-primary;
+        font-size: $font-size-small;
+    }
+}
+
+/* Estilos para los iconos de redes sociales */
+#social-icons {
+    display: flex;
+    justify-content: flex-start; /* Alinea los iconos a la izquierda */
+    max-width: 100%; /* Asegura que los iconos no excedan el ancho del contenedor */
+
+    img {
+        margin: 0 10px; /* Ajusta el margen entre los iconos según sea necesario */
+        height: 35px;
+        width: auto;
+    }
+}
+
+/* Estilos para los inputs y textarea en general */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 80%; /* Hace que los inputs usen el ancho completo del contenedor padre */
+    padding: 12px 20px; /* Aumenta el padding para mejor toque en dispositivos móviles */
+    border: 1px solid #787778; /* Estilo del borde */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: $color-service-background; /* Color de fondo */
+    color: $color-light; /* Color del texto */
+    margin-bottom: 15px; /* Espaciado entre los inputs */
+    font-family: $font-primary; /* Fuente */
+    font-size: $font-size-small; /* Tamaño del texto */
+    &:focus {
+        outline: none; /* Elimina el contorno predeterminado */
+        border-color: #93eab1; /* Color del borde al enfocar */
+    }
+}
+
+/* Estilos para el botón de enviar */
+button[type="submit"] {
+    width: auto; /* El ancho se ajusta al contenido interno */
+    padding: 10px 20px; /* Padding interno */
+    background-color: $color-accent; /* Color de fondo */
+    color: black; /* Color del texto */
+    border: none; /* Sin bordes */
+    border-radius: $border-radius-large; /* Bordes redondeados */
+    font-family: $font-primary; /* Fuente */
+    font-size: $font-size-small; /* Tamaño del texto */
+    cursor: pointer; /* Cursor como puntero para indicar clic */
+    transition: background-color $transition-base, color $transition-base; /* Transición suave para efectos hover */
+    display: block; /* Hacer que el botón sea un bloque para alinear correctamente */
+    margin-top: 20px; /* Margen superior */
+    margin-bottom: 0; /* Margen inferior */
+    align-self: center; /* Alinea el botón al centro en su contenedor flex */
+    &:hover {
+        background-color: $color-light; /* Color de fondo al pasar el ratón */
+        color: $color-dark; /* Color del texto al pasar el ratón */
+    }
+}
+
+/* Ajustes responsivos específicos para dispositivos móviles */
+@media (max-width: $media-break-small) {
+    .service-details {
+        padding: 20px; /* Padding más pequeño para los detalles del servicio */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    button[type="submit"] {
+        width: 100%; /* Ancho completo en dispositivos móviles para evitar desbordamiento */
+    }
+}
+
+.service-details {
+    form {
+        display: flex;
+        flex-direction: column;
+        
+        button {
+            align-self: flex-start; /* Alinea el botón a la izquierda */
+        }
+    }
+}
+
+/* Estilos para el HTML de Portfolio con grids */
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 20px; /* Ajuste del padding */
+    background-color: $color-service-background;
+    text-align: center;
+    align-items: center; /* Centra verticalmente */
+    cursor: pointer;
+
+    img {
+        height: 375px; /* Establece la altura máxima de las imágenes al 100% del contenedor */
+        width: auto;
+        vertical-align: middle; /* Centra verticalmente la imagen */
+
+        &:hover {
+            transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+        }
+    }
+}
+
+.grid-item {
+    height: auto;
+    border: solid 8px $color-border;
+    margin-left: 0px;
+    margin-bottom: 25px;
+    border-radius: 25px;
+    padding: 35px 0px;
+
+    &.grid-one { background-color: #00E1FC; }
+    &.grid-two { background-color: #DFF38D; }
+    &.grid-three { background-color: #F950E5; }
+    &.grid-five { background-color: #F0CA5D; }
+    &.grid-six { background-color: #7ECC7A; }
+
+    &.first-large-item, &.second-large-item {
+        padding: 40px 0px;
+        img {
+            width: 75%;
+            height: auto;
+        }
+    }
+
+    &.first-large-item { background-color: #2A6270; }
+    &.second-large-item { background-color: #C05D38; }
+}
+
+@media only screen and (min-width: $media-break-small) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 100px;
+        gap: 25px; /* Espacio de 25px entre columnas y filas para escritorios */
+    }
+    
+    .first-large-item {
+        grid-column: 1 / 3;
+    }
+    .second-large-item {
+        grid-column: 2 / 4;
+    }
+}
+
